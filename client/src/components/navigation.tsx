@@ -23,7 +23,6 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { label: "Home", id: "home" },
     { label: "About", id: "about" },
     { label: "Services", id: "services" },
     { label: "Portfolio", id: "portfolio" },
@@ -41,7 +40,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="text-2xl font-bold text-[#0F172A]">
-              Embak<span className="text-primary">.</span>
+              Embakh<span className="text-primary">.</span>
             </div>
           </div>
           

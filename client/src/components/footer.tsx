@@ -10,23 +10,23 @@ export default function Footer() {
 
   const services = [
     "Web Development",
-    "UI/UX Design", 
+    "UI/UX Design",
     "Full-Stack Development",
-    "Design Systems"
+    "Design Systems",
   ];
 
   const companyLinks = [
     { label: "About", id: "about" },
     { label: "Portfolio", id: "portfolio" },
     { label: "Team", id: "team" },
-    { label: "Contact", id: "contact" }
+    { label: "Contact", id: "contact" },
   ];
 
   const socialLinks = [
     { icon: Linkedin, href: "#" },
     { icon: Twitter, href: "#" },
     { icon: Github, href: "#" },
-    { icon: Dribbble, href: "#" }
+    { icon: Dribbble, href: "#" },
   ];
 
   return (
@@ -38,8 +38,8 @@ export default function Footer() {
               Embak<span className="text-accent">.</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Helping businesses embark on their digital transformation journey with innovative 
-              web development and design solutions.
+              Helping businesses embark on their digital transformation journey
+              with innovative web development and design solutions.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -52,7 +52,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
@@ -65,13 +65,13 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-300">
               {companyLinks.map((link) => (
                 <li key={link.label}>
-                  <button 
+                  <button
                     onClick={() => scrollToSection(link.id)}
                     className="hover:text-accent transition-colors text-left"
                   >
@@ -82,9 +82,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Embak Solutions. All rights reserved.</p>
+          <p>&copy; 2025 Embakh Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>
