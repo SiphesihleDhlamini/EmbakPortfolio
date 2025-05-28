@@ -11,25 +11,28 @@ export default function PortfolioSection() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Modern online store with advanced filtering and seamless checkout experience.",
-      tags: ["React", "Node.js", "Stripe"],
+      title: "Blue Portfolio",
+      description: "My first ever portfolio that I created and hosted online when I was still a freelancer.",
+      tags: ["HTML", "CSS", "JavaScript"],
       gradient: "from-blue-400 to-purple-500",
-      color: "primary"
+      color: "primary",
+      link: "https://github.com/SiphesihleDhlamini/blueportfolio"
     },
     {
-      title: "Analytics Dashboard",
-      description: "Comprehensive business intelligence platform with real-time data visualization.",
-      tags: ["Vue.js", "D3.js", "Python"],
+      title: "PMB Security Website",
+      description: "Professional security services website with modern design and service showcase features.",
+      tags: ["React", "CSS", "Responsive"],
       gradient: "from-green-400 to-blue-500",
-      color: "accent"
+      color: "accent",
+      link: "https://github.com/SiphesihleDhlamini/pmb-security"
     },
     {
-      title: "Mobile App Design",
-      description: "Intuitive mobile application with focus on user experience and accessibility.",
-      tags: ["Figma", "React Native", "UI/UX"],
+      title: "Tag Along E-Hailing App",
+      description: "Mobile app design for an innovative e-hailing service with intuitive user experience.",
+      tags: ["Figma", "UI/UX", "Mobile Design"],
       gradient: "from-pink-400 to-red-500",
-      color: "primary"
+      color: "primary",
+      link: "https://github.com/SiphesihleDhlamini"
     }
   ];
 
@@ -72,11 +75,16 @@ export default function PortfolioSection() {
                     </Badge>
                   ))}
                 </div>
-                <button className={`font-semibold hover:underline flex items-center gap-1 ${
-                  project.color === "primary" ? "text-primary" : "text-accent"
-                }`}>
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`font-semibold hover:underline flex items-center gap-1 ${
+                    project.color === "primary" ? "text-primary" : "text-accent"
+                  }`}
+                >
                   View Project <ArrowRight className="h-4 w-4" />
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}

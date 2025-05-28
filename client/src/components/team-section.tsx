@@ -9,38 +9,27 @@ export default function TeamSection() {
 
   const teamMembers = [
     {
-      name: "Alex Johnson",
+      name: "Siphesihle Dhlamini",
       role: "Founder & Lead Developer",
-      description: "Full-stack developer with 8+ years of experience in modern web technologies and user experience design.",
+      description: "Full-stack developer and entrepreneur specializing in modern web technologies and creating innovative digital solutions.",
       gradient: "from-primary to-accent",
       color: "primary",
       social: [
         { icon: Linkedin, href: "#" },
-        { icon: Github, href: "#" },
+        { icon: Github, href: "https://github.com/SiphesihleDhlamini" },
         { icon: Twitter, href: "#" }
       ]
     },
     {
-      name: "Sarah Chen",
-      role: "Senior UI/UX Designer",
-      description: "Creative designer specializing in user research, interface design, and creating delightful user experiences.",
+      name: "Andile Mahlangu",
+      role: "Senior UX/UI Designer and Developer",
+      description: "Creative designer and developer specializing in user research, interface design, and creating delightful user experiences.",
       gradient: "from-accent to-primary",
       color: "accent",
       social: [
         { icon: Linkedin, href: "#" },
         { icon: Dribbble, href: "#" },
-        { icon: Twitter, href: "#" }
-      ]
-    },
-    {
-      name: "Mike Rodriguez",
-      role: "Project Manager",
-      description: "Experienced project manager ensuring smooth delivery and exceptional client communication throughout projects.",
-      gradient: "from-purple-500 to-pink-500",
-      color: "purple",
-      social: [
-        { icon: Linkedin, href: "#" },
-        { icon: Twitter, href: "#" }
+        { icon: Github, href: "#" }
       ]
     }
   ];
