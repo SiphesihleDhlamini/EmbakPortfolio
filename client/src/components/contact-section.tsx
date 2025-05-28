@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { Mail, Phone, MapPin, Send, Linkedin, Twitter, Github, Dribbble } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,7 +10,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import type { InsertContactSubmission } from "@shared/schema";
 
@@ -31,29 +29,39 @@ export default function ContactSection() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContactSubmission) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you soon.",
-      });
-      form.reset();
-    },
-    onError: (error) => {
-      toast({
-        title: "Failed to send message",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    },
-  });
-
   const onSubmit = (data: InsertContactSubmission) => {
-    contactMutation.mutate(data);
+    // Create email content
+    const subject = `New Project Inquiry from ${data.name}`;
+    const body = `
+Hi Embak Solutions Team,
+
+I'm interested in your services and would like to discuss a potential project.
+
+Contact Details:
+- Name: ${data.name}
+- Email: ${data.email}
+- Company: ${data.company || 'Not specified'}
+- Budget Range: ${data.budget || 'Not specified'}
+
+Project Details:
+${data.message}
+
+Best regards,
+${data.name}
+    `.trim();
+
+    // Create mailto URL
+    const mailtoUrl = `mailto:hello@embaksolutions.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open default email client
+    window.open(mailtoUrl, '_self');
+    
+    // Show success message and reset form
+    toast({
+      title: "Email client opened!",
+      description: "Your default email app should open with the message pre-filled.",
+    });
+    form.reset();
   };
 
   const contactInfo = [
@@ -241,9 +249,8 @@ export default function ContactSection() {
                 <Button 
                   type="submit" 
                   className="w-full bg-primary hover:bg-primary/90 text-white px-8 py-4 h-auto text-base font-semibold transition-all duration-300 transform hover:scale-105"
-                  disabled={contactMutation.isPending}
                 >
-                  {contactMutation.isPending ? "Sending..." : "Send Message"}
+                  Open Email Client
                   <Send className="ml-2 h-4 w-4" />
                 </Button>
               </form>
