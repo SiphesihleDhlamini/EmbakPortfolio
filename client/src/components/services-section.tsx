@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Palette, Check } from "lucide-react";
+import { Code, Palette, Check, Building, Globe, Paintbrush } from "lucide-react";
 
 export default function ServicesSection() {
   const ref = useRef(null);
@@ -36,7 +36,7 @@ export default function ServicesSection() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Web Development Service */}
           <motion.div 
             className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl"
@@ -89,6 +89,129 @@ export default function ServicesSection() {
                 </li>
               ))}
             </ul>
+          </motion.div>
+          
+          {/* Company Registrations Service */}
+          <motion.div 
+            className="bg-gradient-to-br from-green-500/5 to-green-500/10 p-8 rounded-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                <Building className="text-white h-6 w-6" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F172A]">Company Registrations</h3>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Complete business registration services to help you establish your company legally 
+              and efficiently with all necessary documentation and compliance.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-center text-gray-700">
+                <Check className="text-green-500 mr-3 h-5 w-5" />
+                Business Registration
+              </li>
+              <li className="flex items-center text-gray-700">
+                <Check className="text-green-500 mr-3 h-5 w-5" />
+                Legal Documentation
+              </li>
+              <li className="flex items-center text-gray-700">
+                <Check className="text-green-500 mr-3 h-5 w-5" />
+                Compliance Support
+              </li>
+              <li className="flex items-center text-gray-700">
+                <Check className="text-green-500 mr-3 h-5 w-5" />
+                Registration Consulting
+              </li>
+            </ul>
+          </motion.div>
+          
+          {/* Domain & Hosting Service */}
+          <motion.div 
+            className="bg-gradient-to-br from-purple-500/5 to-purple-500/10 p-8 rounded-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                <Globe className="text-white h-6 w-6" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F172A]">Domain Buying & Support</h3>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Professional domain registration and management services with ongoing technical 
+              support to keep your online presence running smoothly.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-center text-gray-700">
+                <Check className="text-purple-500 mr-3 h-5 w-5" />
+                Domain Registration
+              </li>
+              <li className="flex items-center text-gray-700">
+                <Check className="text-purple-500 mr-3 h-5 w-5" />
+                DNS Management
+              </li>
+              <li className="flex items-center text-gray-700">
+                <Check className="text-purple-500 mr-3 h-5 w-5" />
+                Technical Support
+              </li>
+              <li className="flex items-center text-gray-700">
+                <Check className="text-purple-500 mr-3 h-5 w-5" />
+                Domain Transfers
+              </li>
+            </ul>
+          </motion.div>
+          
+          {/* Branding Service */}
+          <motion.div 
+            className="bg-gradient-to-br from-pink-500/5 to-pink-500/10 p-8 rounded-2xl lg:col-span-2"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+          >
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
+                <Paintbrush className="text-white h-6 w-6" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F172A]">Branding</h3>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Comprehensive branding solutions that establish your unique identity and create 
+              memorable experiences that resonate with your target audience.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-700">
+                  <Check className="text-pink-500 mr-3 h-5 w-5" />
+                  Logo Design & Identity
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <Check className="text-pink-500 mr-3 h-5 w-5" />
+                  Brand Guidelines
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <Check className="text-pink-500 mr-3 h-5 w-5" />
+                  Marketing Materials
+                </li>
+              </ul>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-700">
+                  <Check className="text-pink-500 mr-3 h-5 w-5" />
+                  Brand Strategy
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <Check className="text-pink-500 mr-3 h-5 w-5" />
+                  Visual Identity
+                </li>
+                <li className="flex items-center text-gray-700">
+                  <Check className="text-pink-500 mr-3 h-5 w-5" />
+                  Brand Consulting
+                </li>
+              </ul>
+            </div>
           </motion.div>
         </div>
       </div>
