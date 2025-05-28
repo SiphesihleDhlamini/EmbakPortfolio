@@ -32,7 +32,7 @@ export default function PortfolioSection() {
       tags: ["Figma", "UI/UX", "Mobile Design"],
       gradient: "from-pink-400 to-red-500",
       color: "primary",
-      link: "https://github.com/SiphesihleDhlamini"
+      link: "https://www.figma.com/design/YGlLndG1pOD8trZ0STro7O/Tag-Along-App-designs?node-id=49-210"
     }
   ];
 

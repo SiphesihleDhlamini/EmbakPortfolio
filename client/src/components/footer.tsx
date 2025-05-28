@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="text-2xl font-bold mb-4">
-              Embark<span className="text-accent">.</span>
+              Embak<span className="text-accent">.</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Helping businesses embark on their digital transformation journey with innovative 
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Embark Solutions. All rights reserved.</p>
+          <p>&copy; 2024 Embak Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

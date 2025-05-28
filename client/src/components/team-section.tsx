@@ -69,19 +69,6 @@ export default function TeamSection() {
                 {member.role}
               </p>
               <p className="text-gray-600 mb-4">{member.description}</p>
-              <div className="flex justify-center space-x-4">
-                {member.social.map((social, socialIndex) => (
-                  <button
-                    key={socialIndex}
-                    className={`hover:transition-colors ${
-                      member.color === "primary" ? "text-gray-400 hover:text-primary" : 
-                      member.color === "accent" ? "text-gray-400 hover:text-accent" : "text-gray-400 hover:text-purple-600"
-                    }`}
-                  >
-                    <social.icon className="h-5 w-5" />
-                  </button>
-                ))}
-              </div>
             </motion.div>
           ))}
         </div>

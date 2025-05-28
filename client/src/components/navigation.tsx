@@ -41,7 +41,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="text-2xl font-bold text-[#0F172A]">
-              Embark<span className="text-primary">.</span>
+              Embak<span className="text-primary">.</span>
             </div>
           </div>
           

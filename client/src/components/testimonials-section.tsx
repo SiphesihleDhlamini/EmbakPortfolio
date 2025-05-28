@@ -9,20 +9,20 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: "Jennifer Walsh",
-      company: "CEO, TechStart Inc.",
-      content: "Embark Solutions delivered beyond our expectations. Their attention to detail and user-focused approach resulted in a 40% increase in user engagement.",
+      name: "Tumelo Biyela",
+      company: "Client",
+      content: "Embak Solutions delivered beyond our expectations. Their attention to detail and user-focused approach resulted in outstanding results for our project.",
       color: "accent"
     },
     {
-      name: "David Kim",
-      company: "Founder, Digital Ventures",
-      content: "Professional, creative, and technically excellent. The team at Embark helped us transform our vision into a beautiful, functional web application.",
+      name: "Lebohang Khoahlape",
+      company: "Client",
+      content: "Professional, creative, and technically excellent. The team at Embak helped us transform our vision into a beautiful, functional web application.",
       color: "primary"
     },
     {
-      name: "Lisa Thompson",
-      company: "Marketing Director, GlobalCorp",
+      name: "Thobejane Solutions",
+      company: "Business Partner",
       content: "Their expertise in both design and development made our project seamless. Highly recommend for anyone looking for quality digital solutions.",
       color: "accent"
     }
