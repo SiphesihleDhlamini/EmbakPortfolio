@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { User, Linkedin, Github, Twitter, Dribbble } from "lucide-react";
+import { User, Linkedin, Github, Twitter, Dribbble, Facebook } from "lucide-react";
 
 export default function TeamSection() {
   const ref = useRef(null);
@@ -16,8 +16,8 @@ export default function TeamSection() {
       color: "primary",
       social: [
         { icon: Linkedin, href: "#" },
-        { icon: Github, href: "https://github.com/SiphesihleDhlamini" },
-        { icon: Twitter, href: "#" }
+        { icon: Facebook, href: "https://github.com/SiphesihleDhlamini" },
+        { icon: Github, href: "#" }
       ]
     },
     {
@@ -28,7 +28,7 @@ export default function TeamSection() {
       color: "accent",
       social: [
         { icon: Linkedin, href: "#" },
-        { icon: Dribbble, href: "#" },
+        { icon: Facebook, href: "#" },
         { icon: Github, href: "#" }
       ]
     }

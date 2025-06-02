@@ -34,7 +34,7 @@ export default function AboutSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-[#0F172A] mb-6">About Embak Solutions</h2>
+          <h2 className="text-4xl font-bold text-[#0F172A] mb-6">About Embakh Solutions</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We're a forward-thinking digital agency specializing in web development and UI/UX design. 
             Our mission is to help businesses embark on their digital transformation journey with 

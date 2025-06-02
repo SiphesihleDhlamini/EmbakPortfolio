@@ -17,12 +17,14 @@ function Router() {
 
 function App() {
   return (
+    <div className="overflow-x-hidden">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>
+     </div>
   );
 }
 

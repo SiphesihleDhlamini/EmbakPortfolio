@@ -65,7 +65,7 @@ export default function ContactSection() {
        // Create email content
        const subject = `New Project Inquiry from ${data.name}`;
        const body = `
- Hi Embak Solutions Team,
+ Hi Embakh Solutions Team,
 
  I'm interested in your services and would like to discuss a potential project.
 
@@ -83,7 +83,7 @@ export default function ContactSection() {
      `.trim();
 
      // Create mailto URL
-     const mailtoUrl = `mailto:hello@embaksolutions.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+     const mailtoUrl = `mailto:info@embakh.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
      // Open default email client
      window.open(mailtoUrl, "_self");

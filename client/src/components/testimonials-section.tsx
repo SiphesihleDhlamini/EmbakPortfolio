@@ -11,13 +11,13 @@ export default function TestimonialsSection() {
     {
       name: "Tumelo Biyela",
       company: "Client",
-      content: "Embak Solutions delivered beyond our expectations. Their attention to detail and user-focused approach resulted in outstanding results for our project.",
+      content: "Embakh Solutions delivered beyond our expectations. Their attention to detail and user-focused approach resulted in outstanding results for our project.",
       color: "accent"
     },
     {
       name: "Lebohang Khoahlape",
       company: "Client",
-      content: "Professional, creative, and technically excellent. The team at Embak helped us transform our vision into a beautiful, functional web application.",
+      content: "Professional, creative, and technically excellent. The team at Embakh helped us transform our vision into a beautiful, functional web application.",
       color: "primary"
     },
     {
