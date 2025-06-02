@@ -12,6 +12,7 @@ import {
   Twitter,
   Github,
   Dribbble,
+  Facebook,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -51,40 +52,46 @@ export default function ContactSection() {
     },
   });
 
-  const onSubmit = (data: InsertContactSubmission) => {
-    // Create email content
-    const subject = `New Project Inquiry from ${data.name}`;
-    const body = `
-Hi Embak Solutions Team,
+  const onSubmit = async (data: InsertContactSubmission) => {
+    try {
+      // Simple form submission without backend mutation for now
+      console.log("Form submitted:", data);
+      toast({
+        title: "Email client opened!",
+        description:
+          "Your default email app should open with the message pre-filled.",
+      });
 
-I'm interested in your services and would like to discuss a potential project.
+       // Create email content
+       const subject = `New Project Inquiry from ${data.name}`;
+       const body = `
+ Hi Embak Solutions Team,
 
-Contact Details:
-- Name: ${data.name}
-- Email: ${data.email}
-- Company: ${data.company || "Not specified"}
-- Budget Range: ${data.budget || "Not specified"}
+ I'm interested in your services and would like to discuss a potential project.
 
-Project Details:
-${data.message}
+ Contact Details:
+ - Name: ${data.name}
+ - Email: ${data.email}
+ - Company: ${data.company || "Not specified"}
+ - Budget Range: ${data.budget || "Not specified"}
 
-Best regards,
-${data.name}
-    `.trim();
+ Project Details:
+ ${data.message}
 
-    // Create mailto URL
-    const mailtoUrl = `mailto:hello@embaksolutions.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+ Best regards,
+ ${data.name}
+     `.trim();
 
-    // Open default email client
-    window.open(mailtoUrl, "_self");
+     // Create mailto URL
+     const mailtoUrl = `mailto:hello@embaksolutions.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Show success message and reset form
-    toast({
-      title: "Email client opened!",
-      description:
-        "Your default email app should open with the message pre-filled.",
-    });
-    form.reset();
+     // Open default email client
+     window.open(mailtoUrl, "_self");
+
+      form.reset();
+    } catch (error) {
+      console.error("Failed to send message:", error);
+    }
   };
 
   const contactInfo = [
@@ -110,9 +117,8 @@ ${data.name}
 
   const socialLinks = [
     { icon: Linkedin, color: "primary", href: "#" },
-    { icon: Twitter, color: "accent", href: "#" },
+    { icon: Facebook, color: "accent", href: "#" },
     { icon: Github, color: "primary", href: "#" },
-    { icon: Dribbble, color: "pink", href: "#" },
   ];
 
   return (
@@ -171,9 +177,9 @@ ${data.name}
 
             <div className="mt-8">
               <h4 className="text-lg font-semibold text-[#0F172A] mb-4">
-                Follow Us
+                Socials Coming soon
               </h4>
-              <div className="flex space-x-4">
+              { <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <button
                     key={index}
@@ -190,7 +196,7 @@ ${data.name}
                     <social.icon className="h-4 w-4" />
                   </button>
                 ))}
-              </div>
+              </div> }
             </div>
           </motion.div>
 
@@ -253,7 +259,11 @@ ${data.name}
                           Company
                         </FormLabel>
                         <FormControl>
-                          <Input placeholder="Your company" {...field} />
+                          <Input 
+                            placeholder="Your company" 
+                            {...field}
+                            value={field.value || ""}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -269,7 +279,7 @@ ${data.name}
                         </FormLabel>
                         <Select
                           onValueChange={field.onChange}
-                          defaultValue={field.value}
+                          defaultValue={field.value || undefined}
                         >
                           <FormControl>
                             <SelectTrigger>
@@ -277,16 +287,16 @@ ${data.name}
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
+                            <SelectItem value="1.5k-3.5k">
+                              R1,500 - R3,500
+                            </SelectItem>
+                            <SelectItem value="3.5k-5k">
+                              R3,500 - R5,000
+                            </SelectItem>
                             <SelectItem value="5k-10k">
-                              $5,000 - $10,000
+                              R5,000 - R10,000
                             </SelectItem>
-                            <SelectItem value="10k-25k">
-                              $10,000 - $25,000
-                            </SelectItem>
-                            <SelectItem value="25k-50k">
-                              $25,000 - $50,000
-                            </SelectItem>
-                            <SelectItem value="50k+">$50,000+</SelectItem>
+                            <SelectItem value="10k+">R10,000+</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />

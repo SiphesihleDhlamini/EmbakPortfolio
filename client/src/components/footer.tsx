@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Github, Dribbble } from "lucide-react";
+import { Linkedin, Twitter, Github, Dribbble, Facebook } from "lucide-react";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -24,9 +24,8 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Linkedin, href: "#" },
-    { icon: Twitter, href: "#" },
+    { icon: Facebook, href: "#" },
     { icon: Github, href: "#" },
-    { icon: Dribbble, href: "#" },
   ];
 
   return (
