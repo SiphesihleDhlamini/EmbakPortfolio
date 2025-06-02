@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { User, Linkedin, Github, Twitter, Dribbble, Facebook } from "lucide-react";
+import { User, Linkedin, Github, Twitter, Dribbble, Facebook, Instagram } from "lucide-react";
 
 export default function TeamSection() {
   const ref = useRef(null);
@@ -21,7 +21,7 @@ export default function TeamSection() {
       ]
     },
     {
-      name: "Andile Mahlangu",
+      name: "Andile Mhlanga",
       role: "Senior UX/UI Designer and Developer",
       description: "Creative designer and developer specializing in user research, interface design, and creating delightful user experiences.",
       gradient: "from-accent to-primary",
@@ -31,7 +31,19 @@ export default function TeamSection() {
         { icon: Facebook, href: "#" },
         { icon: Github, href: "#" }
       ]
-    }
+    },
+    {
+      name: "Lebohang Khoahlape",
+      role: "Branding and Marketing Manager",
+      description: "Professional strategist, specializing in brand strategy, digital marketing, and social media management.",
+      gradient: "from-accent to-primary",
+      color: "primary",
+      social: [
+        { icon: Linkedin, href: "#" },
+        { icon: Facebook, href: "#" },
+        { icon: Instagram, href: "#" }
+      ]
+    },
   ];
 
   return (

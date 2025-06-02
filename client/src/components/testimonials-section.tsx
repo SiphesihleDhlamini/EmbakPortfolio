@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
       color: "accent"
     },
     {
-      name: "Lebohang Khoahlape",
+      name: "Gift Mtshweni",
       company: "Client",
       content: "Professional, creative, and technically excellent. The team at Embakh helped us transform our vision into a beautiful, functional web application.",
       color: "primary"
